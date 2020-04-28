@@ -255,15 +255,19 @@ class MyHome extends StatelessWidget {
         ],
         bottom: TabBar(tabs: [
           Container(
-            height: 30.0,
-            child: Text(
-              'IMAGES',
+            height: 35.0,
+            child: Center(
+              child: Text(
+                'IMAGES',
+              ),
             ),
           ),
           Container(
-            height: 30.0,
-            child: Text(
-              'VIDEOS',
+            height: 35.0,
+            child: Center(
+              child: Text(
+                'VIDEOS',
+              ),
             ),
           ),
         ]),

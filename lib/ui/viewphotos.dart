@@ -1,12 +1,13 @@
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:flutter/material.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:flutter_fab_dialer/flutter_fab_dialer.dart';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_fab_dialer/flutter_fab_dialer.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 
 class ViewPhotos extends StatefulWidget {
   final String imgPath;
+
   ViewPhotos(this.imgPath);
 
   @override
@@ -46,7 +47,7 @@ class _ViewPhotosState extends State<ViewPhotos> {
       Navigator.pop(context);
       showDialog(
           context: context,
-          barrierDismissible: false,
+          barrierDismissible: true,
           builder: (BuildContext context) {
             return Padding(
               padding: const EdgeInsets.all(8.0),

@@ -4,7 +4,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('About Sreen'),
+      child: Text('About Screen'),
     );
   }
 }
