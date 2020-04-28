@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:share/share.dart';
 import 'package:wa_status_saver/ui/dashboard.dart';
 import 'package:wa_status_saver/ui/mydrawer.dart';
-import 'package:share/share.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:flutter_html/flutter_html.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
@@ -117,29 +117,36 @@ class MyAppState extends State<MyApp> {
                       )),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Text(
-                              "Storage Permission Required",
-                              style: TextStyle(fontSize: 20.0),
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Storage Permission Required",
+                                style: TextStyle(fontSize: 20.0),
+                              ),
                             ),
                           ),
-                          FlatButton(
-                            padding: EdgeInsets.all(15.0),
-                            child: Text(
-                              "Allow Storage Permission",
-                              style: TextStyle(fontSize: 20.0),
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: FlatButton(
+                                padding: EdgeInsets.all(15.0),
+                                child: Text(
+                                  "Allow Storage Permission",
+                                  style: TextStyle(fontSize: 20.0),
+                                ),
+                                color: Colors.indigo,
+                                textColor: Colors.white,
+                                onPressed: () {
+                                  setState(() {
+                                    _storagePermissionChecker =
+                                        requestStoragePermission();
+                                  });
+                                },
+                              ),
                             ),
-                            color: Colors.indigo,
-                            textColor: Colors.white,
-                            onPressed: () {
-                              setState(() {
-                                _storagePermissionChecker =
-                                    requestStoragePermission();
-                              });
-                            },
                           )
                         ],
                       ),
