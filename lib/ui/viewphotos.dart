@@ -28,22 +28,7 @@ class _ViewPhotosState extends State<ViewPhotos> {
   );
 
   void _onLoading(bool t, String str) {
-    if (t) {
-      showDialog(
-          context: context,
-          barrierDismissible: false,
-          builder: (BuildContext context) {
-            return SimpleDialog(
-              children: <Widget>[
-                Center(
-                  child: Container(
-                      padding: EdgeInsets.all(10.0),
-                      child: CircularProgressIndicator()),
-                ),
-              ],
-            );
-          });
-    } else {
+    if (!t) {
       Navigator.pop(context);
       showDialog(
           context: context,
@@ -91,6 +76,22 @@ class _ViewPhotosState extends State<ViewPhotos> {
                   ),
                 ],
               ),
+            );
+          });
+    } else {
+      Navigator.pop(context);
+      showDialog(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return SimpleDialog(
+              children: <Widget>[
+                Center(
+                  child: Container(
+                      padding: EdgeInsets.all(10.0),
+                      child: CircularProgressIndicator()),
+                ),
+              ],
             );
           });
     }
