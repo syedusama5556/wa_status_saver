@@ -16,7 +16,7 @@ class _PlayStatusState extends State<PlayStatus> {
   @override
   void initState() {
     super.initState();
-    print('Video file you are looking for:' + widget.videoFile);
+    print('Video file you are looking for :' + widget.videoFile);
   }
 
   void dispose() {

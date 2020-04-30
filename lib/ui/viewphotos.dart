@@ -117,7 +117,7 @@ class _ViewPhotosState extends State<ViewPhotos> {
         Uint8List bytes;
         await originalImageFile.readAsBytes().then((value) {
           bytes = Uint8List.fromList(value);
-          print('reading of bytes is completed');
+          print('reading of bytes is completed12');
         }).catchError((onError) {
           print('Exception Error while reading audio from path:' +
               onError.toString());
