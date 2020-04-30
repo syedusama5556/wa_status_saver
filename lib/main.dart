@@ -89,7 +89,7 @@ class MyAppState extends State<MyApp> {
       title: 'Savvy',
       theme: ThemeData(
         brightness: Brightness.light,
-        primaryColor: Colors.teal,
+        primaryColor: Colors.red,
       ),
       home: DefaultTabController(
         length: 2,
@@ -206,13 +206,12 @@ class MyHome extends StatelessWidget {
             icon: Icon(Icons.menu),
             onPressed: () => _scaffoldKey.currentState.openDrawer()),
         title: Text('Status Saver'),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.red,
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.share),
               onPressed: () {
-                Share.share(
-                    'check out my wa status downloader https://mastersam.io',
+                Share.share('check out whatsapp status downloader ',
                     subject: 'Look what I made!');
               }),
           IconButton(

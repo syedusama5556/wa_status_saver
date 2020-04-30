@@ -60,14 +60,14 @@ class _ViewPhotosState extends State<ViewPhotos> {
                             padding: EdgeInsets.all(10.0),
                           ),
                           Text("FileManager > wa_status_saver",
-                              style: TextStyle(
-                                  fontSize: 16.0, color: Colors.teal)),
+                              style:
+                              TextStyle(fontSize: 16.0, color: Colors.red)),
                           Padding(
                             padding: EdgeInsets.all(10.0),
                           ),
                           MaterialButton(
                             child: Text("Close"),
-                            color: Colors.teal,
+                            color: Colors.red,
                             textColor: Colors.white,
                             onPressed: () => Navigator.pop(context),
                           )
@@ -106,8 +106,10 @@ class _ViewPhotosState extends State<ViewPhotos> {
     //The list of FabMiniMenuItems that we are going to use
     var _fabMiniMenuItemList = [
       new FabMiniMenuItem.withText(
-          new Icon(Icons.sd_storage), Colors.teal, 4.0, "Button menu",
-          () async {
+          new Icon(Icons.sd_storage),
+          Colors.red,
+          4.0,
+          "Button menu", () async {
         _onLoading(true, "");
 
         Uri myUri = Uri.parse(widget.imgPath);
@@ -126,15 +128,24 @@ class _ViewPhotosState extends State<ViewPhotos> {
         _onLoading(false,
             "If Image not available in gallary\n\nYou can find all images at");
       }, "Save", Colors.black, Colors.white, true),
-      new FabMiniMenuItem.withText(new Icon(Icons.share), Colors.teal, 4.0,
+      new FabMiniMenuItem.withText(
+          new Icon(Icons.share),
+          Colors.red,
+          4.0,
           "Button menu", () {}, "Share", Colors.black, Colors.white, true),
-      new FabMiniMenuItem.withText(new Icon(Icons.reply), Colors.teal, 4.0,
+      new FabMiniMenuItem.withText(
+          new Icon(Icons.reply),
+          Colors.red,
+          4.0,
           "Button menu", () {}, "Repost", Colors.black, Colors.white, true),
-      new FabMiniMenuItem.withText(new Icon(Icons.wallpaper), Colors.teal, 4.0,
+      new FabMiniMenuItem.withText(
+          new Icon(Icons.wallpaper),
+          Colors.red,
+          4.0,
           "Button menu", () {}, "Set As", Colors.black, Colors.white, true),
       new FabMiniMenuItem.withText(
           new Icon(Icons.delete_outline),
-          Colors.teal,
+          Colors.red,
           4.0,
           "Button menu",
           () {},
@@ -172,7 +183,7 @@ class _ViewPhotosState extends State<ViewPhotos> {
               ),
             ),
             new FabDialer(
-                _fabMiniMenuItemList, Colors.teal, new Icon(Icons.add)),
+                _fabMiniMenuItemList, Colors.red, new Icon(Icons.add)),
           ],
         ),
       ),

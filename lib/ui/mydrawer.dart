@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:share/share.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyNavigationDrawer extends StatelessWidget {
-  final String version = '0.3+2';
+  final String version = '1.0';
 
   _launchURL() async {
-    const url = 'https://github.com/Mastersam07/wa_status_saver';
+    const url = 'https://infusiblecoder.com';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
       throw 'Could not launch $url';
     }
   }
+
   _launchAboutURL() async {
-    const url = 'https://github.com/Mastersam07';
+    const url = 'https://infusiblecoder.com/about.html';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -29,7 +30,7 @@ class MyNavigationDrawer extends StatelessWidget {
       padding: EdgeInsets.zero,
       children: <Widget>[
         UserAccountsDrawerHeader(
-          decoration: BoxDecoration(color: Colors.teal),
+          decoration: BoxDecoration(color: Colors.red),
           accountName: Text(
             'Status Saver',
             style: TextStyle(fontWeight: FontWeight.bold),
@@ -74,8 +75,7 @@ class MyNavigationDrawer extends StatelessWidget {
                 child: Icon(Icons.share)),
             title: Text('Share With Friends'),
             onTap: () {
-              Share.share(
-                  'check out my wa status downloader https://bit.ly/wa_status_downloader',
+              Share.share('check out my whatsapp status downloader',
                   subject: 'Look what I made!');
             },
           ),

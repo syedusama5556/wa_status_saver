@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:io';
+
+import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:wa_status_saver/ui/viewphotos.dart';
 
@@ -22,7 +23,7 @@ class ImageScreenState extends State<ImageScreen> {
     if (!Directory("${_photoDir.path}").existsSync()) {
       return Center(
         child: Text(
-          "Install WhatsApp\nYour Friend's Status Will Be Available Here",
+          "Install WhatsApp\nYour Status Will Be Available Here",
           style: TextStyle(fontSize: 18.0),
         ),
       );

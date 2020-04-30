@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:io';
+
+import 'package:flutter/material.dart';
 import 'package:thumbnails/thumbnails.dart';
 import 'package:wa_status_saver/utils/video_play.dart';
 
@@ -22,7 +23,7 @@ class VideoScreenState extends State<VideoScreen> {
     if (!Directory("${_videoDir.path}").existsSync()) {
       return Center(
         child: Text(
-          "Install WhatsApp\nYour Friend's Status will be available here.",
+          "Install WhatsApp\nYour Status will be available here.",
           style: TextStyle(fontSize: 18.0),
         ),
       );

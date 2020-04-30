@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:io';
+
+import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
 import 'package:wa_status_saver/utils/video_controller.dart';
@@ -69,14 +70,14 @@ class _PlayStatusState extends State<PlayStatus> {
                             padding: EdgeInsets.all(10.0),
                           ),
                           Text("FileManager > wa_status_saver",
-                              style: TextStyle(
-                                  fontSize: 16.0, color: Colors.teal)),
+                              style:
+                              TextStyle(fontSize: 16.0, color: Colors.red)),
                           Padding(
                             padding: EdgeInsets.all(10.0),
                           ),
                           MaterialButton(
                             child: Text("Close"),
-                            color: Colors.teal,
+                            color: Colors.red,
                             textColor: Colors.white,
                             onPressed: () => Navigator.pop(context),
                           )
@@ -116,7 +117,7 @@ class _PlayStatusState extends State<PlayStatus> {
         ),
       ),
       floatingActionButton: new FloatingActionButton(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.red,
           child: Icon(Icons.save),
           onPressed: () async {
             _onLoading(true, "");
