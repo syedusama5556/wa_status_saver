@@ -71,7 +71,7 @@ class _PlayStatusState extends State<PlayStatus> {
                           ),
                           Text("FileManager > wa_status_saver",
                               style:
-                              TextStyle(fontSize: 16.0, color: Colors.red)),
+                                  TextStyle(fontSize: 16.0, color: Colors.red)),
                           Padding(
                             padding: EdgeInsets.all(10.0),
                           ),
@@ -111,7 +111,7 @@ class _PlayStatusState extends State<PlayStatus> {
       body: Container(
         child: StatusVideo(
           videoPlayerController:
-          VideoPlayerController.file(File(widget.videoFile)),
+              VideoPlayerController.file(File(widget.videoFile)),
           looping: true,
           videoSrc: widget.videoFile,
         ),
